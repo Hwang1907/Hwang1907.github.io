@@ -26,17 +26,21 @@ const meta = {
 <PageLayout meta={meta}>
 	<h1 class="title mb-6">Photography</h1>
 	<p class="mb-4">
-		<section class="mt-16">
-			<h2 class="title text-accent mb-6 text-xl"><a href="/posts/">Works</a></h2>
-			<ul class="space-y-4" role="list">
-				{
-					latestPosts.map((p) => (
-						<li class="grid gap-1 sm:grid-cols-[auto_1fr]">
-							<PostPreview post={p} />
-						</li>
-					))
-				}
-			</ul>
-		</section>.
+		All of these photos were taken on film. I have arranged the photos in a specific order (from top
+		to bottom). Hope you enjoy!
+		<p class="mb-4">
+			<section class="mt-16">
+				<h2 class="title text-accent mb-6 text-xl"><a href="/posts/">Works</a></h2>
+				<ul class="space-y-4" role="list">
+					{
+						latestPosts.map((p) => (
+							<li class="grid gap-1 sm:grid-cols-[auto_1fr]">
+								<PostPreview post={p} />
+							</li>
+						))
+					}
+				</ul>
+			</section>.
+		</p>
 	</p>
 </PageLayout>

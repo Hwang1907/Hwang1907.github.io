@@ -1,7 +1,7 @@
 ---
 title: "Behind the 8-Ball"
 description: "Photography I Final"
-publishDate: "22 Nov 2025"
+publishDate: "21 Nov 2025"
 updatedDate: 04 Feb 2026
 tags: ["photography"]
 ---
@@ -28,3 +28,7 @@ tags: ["photography"]
 6. *Sagittarius the Archer*, Silver Gelatin Print, 2025, 8 x 10 in
 7. *Jump Shot*, Silver Gelatin Print, 2025, 8 x 10 in
 
+
+### Info
+
+Captured with a Nikon F2 SLR on Ilford HP5 Plus 400 film. The series consists of 8 x 10 in silver gelatin prints on Ilford paper, featuring distinct black borders.
