@@ -8,13 +8,13 @@ tags: ["photography"]
 
 ## Gallery
 
-![8-Ball Hall](/public/files/photography/1/1.jpeg)
-![End](/public/files/photography/1/2.jpeg)
-![Break](/public/files/photography/1/3.jpeg)
-![The Billiard Player](/public/files/photography/1/4.jpeg)
-![Scratch](/public/files/photography/1/5.jpeg)
-![Sagittarius the Archer](/public/files/photography/1/6.jpeg)
-![Jump Shot](/public/files/photography/1/7.jpeg)
+![8-Ball Hall](/files/photography/1/1.jpeg)
+![End](/files/photography/1/2.jpeg)
+![Break](/files/photography/1/3.jpeg)
+![The Billiard Player](/files/photography/1/4.jpeg)
+![Scratch](/files/photography/1/5.jpeg)
+![Sagittarius the Archer](/files/photography/1/6.jpeg)
+![Jump Shot](/files/photography/1/7.jpeg)
 
 ---
 
