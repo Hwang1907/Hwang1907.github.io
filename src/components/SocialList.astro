@@ -6,9 +6,9 @@ import { Icon } from "astro-icon/components";
 	Find icons via guide: https://www.astroicon.dev/guides/customization/#open-source-icon-sets
 	Only installed pack is: @iconify-json/mdi
 */
+
 const socialLinks: {
 	friendlyName: string;
-	isWebmention?: boolean;
 	link: string;
 	name: string;
 }[] = [
@@ -17,26 +17,31 @@ const socialLinks: {
 		link: "https://github.com/Hwang1907",
 		name: "mdi:github",
 	},
+	{
+		friendlyName: "LinkedIn",
+		link: "https://www.linkedin.com/in/andrew-u-hwang",
+		name: "mdi:linkedin",
+	},
 ];
 ---
 
-<div class="flex flex-wrap items-end gap-x-2">
+<div class="flex flex-wrap items-center gap-x-1.5">
 	<p>Find me on</p>
-	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
-		{
-			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
-				<li class="flex">
-					<a
-						class="hover:text-link inline-block"
-						href={link}
-						rel={`noreferrer ${isWebmention ? "me authn" : ""}`}
-						target="_blank"
-					>
-						<Icon aria-hidden="true" class="h-8 w-8" focusable="false" name={name} />
-						<span class="sr-only">{friendlyName}</span>
-					</a>
-				</li>
-			))
-		}
-	</ul>
+	{
+		socialLinks.map(({ friendlyName, link, name }, index) => (
+			<div class="flex items-center gap-x-1.5">
+				<a
+					class="hover:text-link inline-block transition-all"
+					href={link}
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name={name} />
+					<span class="sr-only">{friendlyName}</span>
+				</a>
+				{/* Adds "and" only between the first and second icon */}
+				{index === 0 && <span>and</span>}
+			</div>
+		))
+	}
 </div>
