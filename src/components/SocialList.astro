@@ -26,22 +26,24 @@ const socialLinks: {
 ---
 
 <div class="flex flex-wrap items-center gap-x-1.5">
-	<p>Find me on</p>
-	{
-		socialLinks.map(({ friendlyName, link, name }, index) => (
-			<div class="flex items-center gap-x-1.5">
-				<a
-					class="hover:text-link inline-block transition-all"
-					href={link}
-					rel="noopener noreferrer"
-					target="_blank"
-				>
-					<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name={name} />
-					<span class="sr-only">{friendlyName}</span>
-				</a>
-				{/* Adds "and" only between the first and second icon */}
-				{index === 0 && <span>and</span>}
-			</div>
-		))
-	}
+	<span>Find me on</span>
+	<a
+		class="cactus-link inline-block transition-all"
+		href="https://github.com/Hwang1907"
+		rel="noopener noreferrer"
+		target="_blank"
+	>
+		<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name="mdi:github" />
+		<span class="sr-only">GitHub</span>
+	</a>
+	<span>and</span>
+	<a
+		class="cactus-link inline-block transition-all"
+		href="https://www.linkedin.com/in/andrew-u-hwang"
+		rel="noopener noreferrer"
+		target="_blank"
+	>
+		<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name="mdi:linkedin" />
+		<span class="sr-only">LinkedIn</span>
+	</a>
 </div>
