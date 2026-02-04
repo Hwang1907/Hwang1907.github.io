@@ -1,0 +1,35 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PostPreview from "@/components/blog/PostPreview.astro";
+import PageLayout from "@/layouts/Base.astro";
+import { getAllPosts } from "@/data/post";
+import { collectionDateSort } from "@/utils/date";
+
+const MAX_POSTS = 10;
+const allPosts = await getAllPosts();
+const allPostsByDate = allPosts.sort(collectionDateSort) as CollectionEntry<"post">[];
+const latestPosts = allPostsByDate.slice(0, MAX_POSTS);
+
+const meta = {
+	description: "A collection of photographs I took on film!",
+	title: "Photography",
+};
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mb-6">Photography</h1>
+	<p class="mb-4">
+		<section class="mt-16">
+			<h2 class="title text-accent mb-6 text-xl"><a href="/posts/">Works</a></h2>
+			<ul class="space-y-4" role="list">
+				{
+					latestPosts.map((p) => (
+						<li class="grid gap-1 sm:grid-cols-[auto_1fr]">
+							<PostPreview post={p} />
+						</li>
+					))
+				}
+			</ul>
+		</section>.
+	</p>
+</PageLayout>
