@@ -5,10 +5,17 @@ import PageLayout from "@/layouts/Base.astro";
 import { getAllPosts } from "@/data/post";
 import { collectionDateSort } from "@/utils/date";
 
-const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
-const allPostsByDate = allPosts.sort(collectionDateSort) as CollectionEntry<"post">[];
-const latestPosts = allPostsByDate.slice(0, MAX_POSTS);
+
+// 1. Filter for posts that include the "photography" tag
+const photographyPosts = allPosts.filter((post) => post.data.tags?.includes("photography"));
+
+// 2. Sort and slice the filtered results
+const MAX_POSTS = 10;
+const sortedPhotographyPosts = photographyPosts.sort(
+	collectionDateSort,
+) as CollectionEntry<"post">[];
+const latestPosts = sortedPhotographyPosts.slice(0, MAX_POSTS);
 
 const meta = {
 	description: "A collection of photographs I took on film!",
