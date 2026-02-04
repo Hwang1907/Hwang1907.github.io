@@ -1,0 +1,67 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	description: "Archive of undergraduate math and physics problem sets.",
+	title: "Homework",
+};
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mb-6">Homework</h1>
+	<div class="prose prose-sm prose-cactus max-w-none">
+		<p class="mb-8">An archive of my undergraduate math and physics problem sets.</p>
+
+		<h2 class="title text-xl">Physics 15: Honors Introductory Physics I</h2>
+		<ul class="list-none ps-0" role="list">
+			<li class="flex items-center gap-x-2">
+				<span>Problem Set 1</span>
+				<a
+					class="cactus-link"
+					href="/files/physics/p15w26_homework1.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					View PDF
+				</a>
+			</li>
+			<li class="flex items-center gap-x-2">
+				<span>Problem Set 2</span>
+				<a
+					class="cactus-link"
+					href="/files/physics/p15w26_homework2.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					View PDF
+				</a>
+			</li>
+		</ul>
+
+		<h2 class="title mt-12 text-xl">Math 24: Proof-Based Linear Algebra</h2>
+		<ul class="list-none ps-0" role="list">
+			<li class="flex items-center gap-x-2">
+				<span>Problem Set 1</span>
+				<a
+					class="cactus-link"
+					href="/files/math/m24w26_homework1.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					View PDF
+				</a>
+			</li>
+			<li class="flex items-center gap-x-2">
+				<span>Problem Set 2</span>
+				<a
+					class="cactus-link"
+					href="/files/math/m24w26_homework2.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					View PDF
+				</a>
+			</li>
+		</ul>
+	</div>
+</PageLayout>

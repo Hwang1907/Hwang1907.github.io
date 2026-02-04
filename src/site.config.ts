@@ -25,7 +25,7 @@ export const siteConfig: SiteConfig = {
 		- The link value found in src/components/layout/Header.astro L:35
 		- In the footer found in src/components/layout/Footer.astro L:12
 	*/
-	title: "Hwang1907",
+	title: "Andrew Hwang",
 	// ! Please remember to replace the following site property with your own domain, used in astro.config.ts
 	url: "https://Hwang1907.github.io/",
 };
@@ -41,7 +41,7 @@ export const menuLinks: { path: string; title: string }[] = [
 		title: "Blog",
 	},
 	{
-		path: "/notes/",
+		path: "/homework/",
 		title: "Homework",
 	},
 ];
