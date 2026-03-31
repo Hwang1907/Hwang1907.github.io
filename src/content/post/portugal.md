@@ -8,13 +8,13 @@ tags: ["photography"]
 
 ## Gallery
 
-![1](/files/photography/2/1.jpeg)
-![2](/files/photography/2/2.jpeg)
-![3](/files/photography/2/3.jpeg)
-![4](/files/photography/2/4.jpeg)
-![5](/files/photography/2/5.jpeg)
-![6](/files/photography/2/6.jpeg)
-![7](/files/photography/2/7.jpeg)
+![1](/files/sart29f25/2/1.jpeg)
+![2](/files/sart29f25/2/2.jpeg)
+![3](/files/sart29f25/2/3.jpeg)
+![4](/files/sart29f25/2/4.jpeg)
+![5](/files/sart29f25/2/5.jpeg)
+![6](/files/sart29f25/2/6.jpeg)
+![7](/files/sart29f25/2/7.jpeg)
 
 ---
 
