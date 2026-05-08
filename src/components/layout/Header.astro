@@ -9,28 +9,80 @@ import { siteConfig } from "../../site.config";
 	<div class="flex sm:flex-col">
 		<a
 			aria-current={Astro.url.pathname === "/" ? "page" : false}
-			class="inline-flex items-center sm:relative sm:inline-block sm:grayscale sm:hover:filter-none"
+			class="kite-logo-link inline-flex items-center sm:relative sm:inline-block"
 			href="/"
 		>
 			<svg
 				aria-hidden="true"
-				class="me-3 h-10 w-6 sm:absolute sm:-start-18 sm:me-0 sm:h-20 sm:w-12"
+				class="kite-logo me-3 h-10 w-6 sm:absolute sm:-start-18 sm:me-0 sm:h-20 sm:w-12"
 				fill="none"
 				focusable="false"
-				viewBox="0 0 272 480"
+				viewBox="-60 -60 220 280"
 				xmlns="http://www.w3.org/2000/svg"
 			>
-				<title>Astro Cactus Logo</title>
-				<path
-					fill="#cdffb8"
-					d="M181.334 93.333v-40L226.667 80v40zM136.001 53.333 90.667 26.667v426.666L136.001 480zM45.333 220 0 193.334v140L45.333 360z"
-				></path><path
-					fill="#d482ab"
-					d="M90.667 26.667 136.001 0l45.333 26.667-45.333 26.666zM181.334 53.33l45.333-26.72L272 53.33 226.667 80zM136 240l-45.333-26.67v53.34zM0 193.33l45.333-26.72 45.334 26.72L45.333 220zM181.334 93.277 226.667 120l-45.333 26.67z"
-				></path><path
-					fill="#2abc89"
-					d="m136 53.333 45.333-26.666v120L226.667 120V80L272 53.333V160l-90.667 53.333v240L136 480V306.667L45.334 360V220l45.333-26.667v73.334L136 240z"
-				></path>
+				<title>Kite Graph Logo</title>
+				<!-- Pentagon fill - changes color on hover -->
+				<polygon
+					class="kite-fill"
+					points="50,35 0,75 15,145 85,145 100,75"
+					fill="#add8e6"
+					fill-opacity="0.4"></polygon>
+				<!-- Edges - light gray -->
+				<line
+					x1="50"
+					y1="-35"
+					x2="50"
+					y2="35"
+					stroke="#aaaaaa"
+					stroke-width="5"
+					stroke-linecap="round"></line>
+				<line
+					x1="50"
+					y1="35"
+					x2="0"
+					y2="75"
+					stroke="#aaaaaa"
+					stroke-width="5"
+					stroke-linecap="round"></line>
+				<line
+					x1="0"
+					y1="75"
+					x2="15"
+					y2="145"
+					stroke="#aaaaaa"
+					stroke-width="5"
+					stroke-linecap="round"></line>
+				<line
+					x1="15"
+					y1="145"
+					x2="85"
+					y2="145"
+					stroke="#aaaaaa"
+					stroke-width="5"
+					stroke-linecap="round"></line>
+				<line
+					x1="85"
+					y1="145"
+					x2="100"
+					y2="75"
+					stroke="#aaaaaa"
+					stroke-width="5"
+					stroke-linecap="round"></line>
+				<line
+					x1="100"
+					y1="75"
+					x2="50"
+					y2="35"
+					stroke="#aaaaaa"
+					stroke-width="5"
+					stroke-linecap="round"></line>
+				<!-- Nodes - light blue -->
+				<circle class="kite-node" cx="50" cy="-35" r="10" fill="#87ceeb"></circle>
+				<circle class="kite-node" cx="50" cy="35" r="10" fill="#87ceeb"></circle>
+				<circle class="kite-node" cx="0" cy="75" r="10" fill="#87ceeb"></circle>
+				<circle class="kite-node" cx="15" cy="145" r="10" fill="#87ceeb"></circle>
+				<circle class="kite-node" cx="85" cy="145" r="10" fill="#87ceeb"></circle>
+				<circle class="kite-node" cx="100" cy="75" r="10" fill="#87ceeb"></circle>
 			</svg>
 			<span class="text-xl font-bold sm:text-2xl">{siteConfig.title}</span>
 		</a>
@@ -94,6 +146,15 @@ import { siteConfig } from "../../site.config";
 		</button>
 	</mobile-button>
 </header>
+
+<style>
+	.kite-fill {
+		transition: fill 0.3s ease;
+	}
+	.kite-logo-link:hover .kite-fill {
+		fill: #f4c2a1;
+	}
+</style>
 
 <script>
 	import { toggleClass } from "@/utils/domElement";
