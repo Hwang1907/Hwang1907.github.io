@@ -1,0 +1,124 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	description: "Archive of my projects, including research, and other work.",
+	title: "Projects",
+};
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mb-6">Projects</h1>
+	<div class="prose prose-sm prose-cactus max-w-none">
+		<p class="mb-8">An archive of my projects, including research and other work.</p>
+		<h2 class="title text-xl">Research</h2>
+
+		<h3>CT Radiomics for Pancreatic Tumor Treatment Analysis</h3>
+		<p><em>Thayer School of Engineering, Dartmouth College — with Mayo Clinic</em></p>
+		<p>December 2025 – June 2026</p>
+		<p>
+			I worked on building a machine learning pipeline to help predict whether pancreatic cancer
+			patients respond to photodynamic therapy (PDT) using just their CT scans. There are subtle
+			texture changes in CT images that the human eye can't pick up, so then our group considered
+			whether a model could. I extracted radiomic features from longitudinal scans, ranked them
+			using mRMR selection, and tested their stability through bootstrapping. From there, I used PCA
+			to reduce dimensionality and trained an SVM classifier to separate responders from
+			non-responders. The top features ended up being GLCM Entropy and Shape Compactness, which our
+			collaborating radiologists confirmed made clinical sense. We also saw morphological tumor
+			volume decrease across timepoints, which was encouraging yet not a full indicator of tumor
+			deletion. I have attached a poster of my work, which I presented at <a
+				href="https://students.dartmouth.edu/surfd/news-events/wetterhahn-science-symposium/2026-symposium"
+				target="_blank"
+				rel="noopener noreferrer">Dartmouth's Wetterhahn Symposium</a
+			>.
+		</p>
+		<p>
+			<a
+				href="/files/research/Andrew Hwang - POGUE Poster.pdf"
+				target="_blank"
+				rel="noopener noreferrer">View Poster (PDF)</a
+			>
+		</p>
+		<p>
+			<strong>Tools:</strong> Python, Scikit-Learn, LIFEx, 3D Slicer<br />
+			<strong>Methods:</strong> Radiomics, mRMR, PCA, SVM (RBF kernel), bootstrap stability analysis<br
+			/>
+			<strong>Collaborators:</strong> Supervisor: <a
+				href="https://engineering.dartmouth.edu/community/faculty/brian-pogue"
+				target="_blank"
+				rel="noopener noreferrer">Brian Pogue</a
+			>, Marien Ochoa
+		</p>
+
+		<h3>CNN-Based Phase Imaging: A Quantitative Performance Analysis</h3>
+		<p><em>University at Albany-State University of New York</em></p>
+		<p>April 2024 – September 2025</p>
+		<p>
+			I worked on evaluating the performance of a convolutional neural network (CNN) for phase
+			imaging, which is a technique used to visualize transparent samples. The CNN was trained to
+			reconstruct phase images from intensity measurements, and I analyzed its performance using
+			various metrics such as mean squared error, structural similarity index, and peak
+			signal-to-noise ratio. I have attached a poster of my work, which I presented at the <a
+				href="https://www.aps.org/events/2024/130th-symposium-aps-nyss"
+				target="_blank"
+				rel="noopener noreferrer">130th Topical Symposium of the APS New York State Section</a
+			>.
+		</p>
+		<p>
+			<a
+				href="/files/research/Andrew Hwang - PETRUCCELLI Poster.pdf"
+				target="_blank"
+				rel="noopener noreferrer">View Poster (PDF)</a
+			>
+		</p>
+		<p>
+			<strong>Tools:</strong> Python, TensorFlow, Keras<br />
+			<strong>Methods:</strong> CNNs, phase retrieval, <a
+				href="https://en.wikipedia.org/wiki/Transport-of-intensity_equation"
+				target="_blank"
+				rel="noopener noreferrer">Transport in Intensity Equation (TIE)</a
+			><br />
+			<strong>Collaborators:</strong> Supervisor: <a
+				href="https://www.albany.edu/physics/faculty/jonathan-petruccelli"
+				target="_blank"
+				rel="noopener noreferrer">Jonathan Petruccelli</a
+			>
+		</p>
+
+		<h2 class="title text-xl">Extra Projects</h2>
+		<h3>Math 38: Graph Theory Final Project</h3>
+		<p><em>Dartmouth College</em></p>
+		<p>May 26th, 2026</p>
+		<p>
+			For my final project in Graph Theory, I worked with peers on presenting on tournament graphs,
+			which are directed graphs that model the outcomes of round-robin competitions. We covered
+			topics such as Hamiltonian paths, score sequences, and the structure of tournaments. More
+			importantly, we discussed the proofs of two fundamental theorems, Redei's Theorem and Landau's
+			Theorem. I have attached our written report below:
+		</p>
+		<p>
+			<a href="/files/m38s26/m38s26_final_report.pdf" target="_blank" rel="noopener noreferrer"
+				>View Written Report (PDF)</a
+			>
+		</p>
+
+		<h3>Math Directed Reading Program: Cryptography</h3>
+		<p><em>Dartmouth College</em></p>
+		<p>March 30th-June 3rd, 2026</p>
+		<p>
+			I participated in the Math Directed Reading Program, where me and my peers read the book <em>
+				An Introduction to Mathematical Cryptography</em
+			> by Hoffstein, Pipher, and Silverman. We met weekly to discuss the material and covered topics
+			such as number theory, Discrete Logarithm Problem, Diffe-Hellman Exchange, RSA encryption, elliptic
+			curve cryptography, and lattice-based cryptography. It was a great opportunity to dive deeper into
+			the mathematical foundations of cryptography and learn about different cryptosystems. I went more
+			in depth on lattice-based cryptography, which I also wrote a final paper on the topic, attached
+			below:
+		</p>
+		<p>
+			<a href="/files/drp/lattices.pdf" target="_blank" rel="noopener noreferrer"
+				>View Notes (PDF)</a
+			>
+		</p>
+	</div>
+</PageLayout>
