@@ -192,6 +192,7 @@ h2 {
 }
 
 .updates.section-rule {
+  grid-template-columns: minmax(0, 0.45fr) minmax(0, 1.55fr);
   border-top: 0;
 }
 
@@ -378,9 +379,10 @@ h2 {
 
 .update-list li {
   display: grid;
-  grid-template-columns: 8.5rem minmax(0, 1fr);
-  gap: 1rem;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  gap: 0.75rem;
   padding-block: 0.7rem;
+  text-align: left;
 }
 
 .update-list time {
@@ -418,8 +420,8 @@ h2 {
   }
 
   .update-list li {
-    grid-template-columns: 1fr;
-    gap: 0.1rem;
+    grid-template-columns: 6.25rem minmax(0, 1fr);
+    gap: 0.5rem;
   }
 
   .about {
