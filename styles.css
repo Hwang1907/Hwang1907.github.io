@@ -191,6 +191,10 @@ h2 {
   padding-bottom: 4rem;
 }
 
+.updates.section-rule {
+  border-top: 0;
+}
+
 .article {
   padding-bottom: 4rem;
 }
@@ -369,6 +373,7 @@ h2 {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 0.95rem;
 }
 
 .update-list li {
@@ -376,16 +381,11 @@ h2 {
   grid-template-columns: 8.5rem minmax(0, 1fr);
   gap: 1rem;
   padding-block: 0.7rem;
-  border-bottom: 1px solid var(--rule);
-}
-
-.update-list li:first-child {
-  border-top: 1px solid var(--rule);
 }
 
 .update-list time {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .site-footer {
