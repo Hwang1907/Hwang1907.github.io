@@ -148,8 +148,10 @@ h2 {
 
 .about-portrait img {
   display: block;
-  width: min(100%, 290px);
+  width: 100%;
+  max-width: 290px;
   height: auto;
+  object-fit: contain;
   border: 1px solid var(--rule);
   background: #e9e7e0;
 }
