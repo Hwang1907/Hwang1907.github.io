@@ -193,7 +193,7 @@ h2 {
 
 .updates.section-rule {
   grid-template-columns: minmax(0, 0.45fr) minmax(0, 1.55fr);
-  border-top: 0;
+  border-top: 1px solid var(--rule);
 }
 
 .article {
