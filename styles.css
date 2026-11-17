@@ -141,6 +141,9 @@ h2 {
 }
 
 .about-portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   min-width: 0;
   margin: 0;
 }
