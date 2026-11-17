@@ -117,8 +117,19 @@ h2 {
   font-size: clamp(1.9rem, 4.5vw, 2.5rem);
 }
 
-.about > p {
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.8fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: 2rem;
+}
+
+.about-copy {
   max-width: 690px;
+}
+
+.about-copy > p {
   margin-bottom: 1.15rem;
   color: #000;
 }
@@ -126,6 +137,20 @@ h2 {
 .about strong {
   color: #000;
   font-weight: 600;
+}
+
+.about-portrait {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-portrait img {
+  display: block;
+  width: min(100%, 440px);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  background: #e9e7e0;
 }
 
 .section-rule {
@@ -278,9 +303,9 @@ h2 {
 
 .photo-gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   align-items: start;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 .photo-gallery figure {
@@ -295,9 +320,7 @@ h2 {
 }
 
 .photo-gallery figcaption {
-  margin-top: 0.45rem;
-  color: var(--muted);
-  font-size: 0.9rem;
+  display: none;
 }
 
 .work-list {
@@ -385,6 +408,14 @@ h2 {
   .update-list li {
     grid-template-columns: 1fr;
     gap: 0.1rem;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-portrait {
+    justify-content: flex-start;
   }
 
   .photo-gallery {
