@@ -144,6 +144,7 @@ h2 {
   flex: 0 0 290px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .about-portrait img {
@@ -153,6 +154,7 @@ h2 {
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center;
   border: 1px solid var(--rule);
   background: #e9e7e0;
 }
