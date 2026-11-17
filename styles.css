@@ -141,9 +141,8 @@ h2 {
 }
 
 .about-portrait {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  min-width: 0;
+  margin: 0;
 }
 
 .about-portrait img {
@@ -154,6 +153,13 @@ h2 {
   object-fit: contain;
   border: 1px solid var(--rule);
   background: #e9e7e0;
+}
+
+.about-portrait figcaption {
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .section-rule {
