@@ -118,15 +118,15 @@ h2 {
 }
 
 .about {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
   align-items: center;
-  justify-content: space-between;
   gap: clamp(1.5rem, 4vw, 3rem);
   margin-bottom: 2rem;
 }
 
 .about-copy {
-  flex: 1 1 auto;
+  min-width: 0;
   max-width: 690px;
 }
 
@@ -141,7 +141,6 @@ h2 {
 }
 
 .about-portrait {
-  flex: 0 0 290px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -149,8 +148,7 @@ h2 {
 
 .about-portrait img {
   display: block;
-  width: 100%;
-  max-width: 290px;
+  width: min(100%, 290px);
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
@@ -417,17 +415,12 @@ h2 {
   }
 
   .about {
-    display: block;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: 1rem;
   }
 
   .about-portrait {
-    margin-top: 1.25rem;
     justify-content: flex-start;
-    flex-basis: auto;
-  }
-
-  .about-portrait img {
-    max-width: 100%;
   }
 
   .photo-gallery {
