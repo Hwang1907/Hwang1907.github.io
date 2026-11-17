@@ -150,9 +150,6 @@ h2 {
   display: block;
   width: min(100%, 290px);
   height: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center;
   border: 1px solid var(--rule);
   background: #e9e7e0;
 }
